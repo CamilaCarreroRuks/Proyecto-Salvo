@@ -306,9 +306,7 @@ var app = new Vue({
                         this.showModal(true);
                     }
                 })
-                .catch(error => {
-                    console.log(error.response)
-                    console.log("error, código de estatus: " + error.response.status);
+                .catch(error => 
                     if (error.response.status == 403) {
                         swal("Falló el registro", error.response.data, "warning");
                         //this.modal.tittle = "Falló el registro";
